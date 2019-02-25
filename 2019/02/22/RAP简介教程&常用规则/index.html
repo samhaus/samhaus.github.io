@@ -14,7 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      测试文章标题 | samhaus的博客
+      RAP简介教程&amp;常用规则 | samhaus的博客
     
   </title>
   <meta name="author" content="samhaus">
@@ -111,7 +111,7 @@
 				<!-- Page title -->
 				<p>
 					
-						当前文章&nbsp;:&nbsp;《测试文章标题》
+						当前文章&nbsp;:&nbsp;《RAP简介教程&amp;常用规则》
 					
 				</p>
 				<!-- Progress bar -->
@@ -270,8 +270,8 @@
 	
 	<div class="article-title">
 		
-	<a href="/2019/02/22/测试文章2/" itemprop="url">
-		测试文章标题
+	<a href="/2019/02/22/RAP简介教程&常用规则/" itemprop="url">
+		RAP简介教程&amp;常用规则
 	</a>
 
 	</div>
@@ -280,7 +280,7 @@
 		<span>
 			
 	发布于
-	<a href="/2019/02/22/测试文章2/" itemprop="url">
+	<a href="/2019/02/22/RAP简介教程&常用规则/" itemprop="url">
 		<time datetime="2019-02-22T09:21:21.000Z" itemprop="datePublished">
 	  		2019-02-22
 	  </time>
@@ -288,9 +288,9 @@
 
 	/
 	更新于
-	<a href="/2019/02/22/测试文章2/" itemprop="url">
+	<a href="/2019/02/22/RAP简介教程&常用规则/" itemprop="url">
 		<time datetime="2019-02-22T09:21:21.000Z" itemprop="dateUpdated">
-	  		2019-02-22
+	  		2019-02-25
 	  </time>
 	</a> 	
 
@@ -303,7 +303,7 @@
 		/
 		
 
-    <span class="leancloud_visitors" id="/2019/02/22/测试文章2/_visitors" data-url="/2019/02/22/测试文章2/" data-title="测试文章标题">
+    <span class="leancloud_visitors" id="/2019/02/22/RAP简介教程&常用规则/_visitors" data-url="/2019/02/22/RAP简介教程&常用规则/" data-title="RAP简介教程&常用规则">
         热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
     </span>
@@ -312,7 +312,7 @@
 
 
 
-    <span class="leancloud_likes" id="/2019/02/22/测试文章2/_likes" data-url="/2019/02/22/测试文章2/" data-title="测试文章标题" rel="unlike">
+    <span class="leancloud_likes" id="/2019/02/22/RAP简介教程&常用规则/_likes" data-url="/2019/02/22/RAP简介教程&常用规则/" data-title="RAP简介教程&常用规则" rel="unlike">
         喜欢
         <i class="fa fa-heart"></i>
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -321,7 +321,125 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-			
+		<blockquote>
+<h3 id="上篇文章浅谈了mock数据的工具对比，在实际使用过程中，需要mock的数据包含各种语法规则、数据规律等等，最完善的规则建议还是参考MOCK-js教程，但是，这里就需要了解下RAP在使用时常用的一些写法了。"><a href="#上篇文章浅谈了mock数据的工具对比，在实际使用过程中，需要mock的数据包含各种语法规则、数据规律等等，最完善的规则建议还是参考MOCK-js教程，但是，这里就需要了解下RAP在使用时常用的一些写法了。" class="headerlink" title="上篇文章浅谈了mock数据的工具对比，在实际使用过程中，需要mock的数据包含各种语法规则、数据规律等等，最完善的规则建议还是参考MOCK.js教程，但是，这里就需要了解下RAP在使用时常用的一些写法了。"></a><a href="https://juejin.im/post/5bd1b630e51d457a544d2ec7" target="_blank" rel="noopener">上篇文章</a>浅谈了mock数据的工具对比，在实际使用过程中，需要mock的数据包含各种语法规则、数据规律等等，最完善的规则建议还是参考<a href="http://mockjs.com/" target="_blank" rel="noopener">MOCK.js</a>教程，但是，这里就需要了解下RAP在使用时常用的一些写法了。</h3></blockquote>
+<p>首先我们先看下RAP的整个页面：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4332108-f97e09cc3d6072b8?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="空白接口页面"><br>日常使用主要涉及几个模块：</p>
+<ul>
+<li><h3 id="接口简介"><a href="#接口简介" class="headerlink" title="接口简介"></a>接口简介</h3></li>
+</ul>
+<p><strong>主要是接口地址、接口类型等等</strong><br><img src="http://upload-images.jianshu.io/upload_images/4332108-6b6d91e8ecc42878?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<ul>
+<li><h3 id="请求参数"><a href="#请求参数" class="headerlink" title="请求参数"></a>请求参数</h3><blockquote>
+<p>可以分为三类：</p>
+<ul>
+<li>1、headers:一般头部放置验证参数等，例如cookie、token等</li>
+<li>2、Query Params:常用是get方式请求，用于校验请求参数</li>
+<li>3、Body Params：常用是post方式请求，用于校验请求参数</li>
+</ul>
+</blockquote>
+</li>
+<li><h3 id="响应参数"><a href="#响应参数" class="headerlink" title="响应参数"></a>响应参数</h3><p><strong>接口请求成功以后的返回参数</strong></p>
+<h3 id="而参数一般有两种方式导入："><a href="#而参数一般有两种方式导入：" class="headerlink" title="而参数一般有两种方式导入："></a>而参数一般有两种方式导入：</h3></li>
+<li><p>单个参数导入：<br>主要是<strong>名称</strong>、<strong>类型</strong>、<strong>生成规则</strong>、<strong>初始值</strong>、<strong>简介</strong>这几个，这里的生成规则就需要一些按照一些特定规则来了。<br><img src="http://upload-images.jianshu.io/upload_images/4332108-a8477dd9a2ab5a8f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="单个参数导入"></p>
+</li>
+<li><p>还有一种是直接导入一个<strong>Json字符串</strong>，系统会直接帮我们转化成相对应的参数格式：</p>
+</li>
+</ul>
+<pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"code"</span><span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+    <span class="token property">"data"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"entries"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"上海市"</span><span class="token punctuation">,</span>
+                <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">2</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"闵行区"</span><span class="token punctuation">,</span>
+                <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">3</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"长宁区"</span><span class="token punctuation">,</span>
+                <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">6</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="http://upload-images.jianshu.io/upload_images/4332108-3f29e26759d3b5f3?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="直接导入Json字符串"><br>这样就可以直接生成一个返回模板：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4332108-253a3276a8bc5316?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br>但是此时和我们要使用的参数可能还是有出入，那么我们就可以直接在响应内容的表格内作相对应的修改了，例如修改对应参数<strong>生成规则、初始值</strong>等，去自定义参数生成你想要的值。写完记得右上角的保存哦。</p>
+<hr>
+<hr>
+<h2 id="重要-这里整理了常用参数的规则写法-骚操作-，感兴趣可以收藏当做便利贴："><a href="#重要-这里整理了常用参数的规则写法-骚操作-，感兴趣可以收藏当做便利贴：" class="headerlink" title="(重要)这里整理了常用参数的规则写法(骚操作)，感兴趣可以收藏当做便利贴："></a>(重要)这里整理了常用参数的规则写法(骚操作)，感兴趣可以收藏当做便利贴：</h2><p><img src="http://upload-images.jianshu.io/upload_images/4332108-3c04e2ee2f4d1267?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="官方demo在线实例"></p>
+<h4 id="官方demo在线实例已经有一些各种类型的示例，我们这里做一些常用的补充："><a href="#官方demo在线实例已经有一些各种类型的示例，我们这里做一些常用的补充：" class="headerlink" title="官方demo在线实例已经有一些各种类型的示例，我们这里做一些常用的补充："></a>官方demo在线实例已经有一些各种类型的示例，我们这里做一些常用的补充：</h4><table>
+<thead>
+<tr>
+<th>类型</th>
+<th style="text-align:center">写法</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td style="text-align:center">1-10</td>
+<td style="text-align:center">生成一个长度为1-10位的字符串（定义初始值后生成的字符串为多次重复该初始值）</td>
+</tr>
+<tr>
+<td>String</td>
+<td style="text-align:center">@order(上海市,长宁区,闵行区,静安区,嘉定区)</td>
+<td style="text-align:center">从数组里随机一个值出来，一般是按照数组顺序排序列出</td>
+</tr>
+<tr>
+<td>String</td>
+<td style="text-align:center">@datetime(“yyyy-MM-dd”)</td>
+<td style="text-align:center">按照一定格式生成的时间字符串，符合‘yyyyMMdd’的生成规则</td>
+</tr>
+<tr>
+<td>String</td>
+<td style="text-align:center">@now</td>
+<td style="text-align:center">当前时间</td>
+</tr>
+<tr>
+<td>String</td>
+<td style="text-align:center">@province</td>
+<td style="text-align:center">随机一个国内省、地区、直辖市名称</td>
+</tr>
+<tr>
+<td>String</td>
+<td style="text-align:center">@city</td>
+<td style="text-align:center">随机一个国内地级市名称</td>
+</tr>
+<tr>
+<td>String</td>
+<td style="text-align:center">@county</td>
+<td style="text-align:center">随机一个县的名称</td>
+</tr>
+<tr>
+<td>String</td>
+<td style="text-align:center">@color()</td>
+<td style="text-align:center">随机生成一种颜色（例如#FF00FF）</td>
+</tr>
+<tr>
+<td>Number</td>
+<td style="text-align:center">@range(2,10)</td>
+<td style="text-align:center">生成一个从2到10的正序数组</td>
+</tr>
+<tr>
+<td>Number</td>
+<td style="text-align:center">@natural(10000, 99999)</td>
+<td style="text-align:center">随机生成一个自然数（比如生成一个ID就可以用），括号里面是它的限制条件</td>
+</tr>
+<tr>
+<td>RegExp</td>
+<td style="text-align:center">/\d{5,10}-/</td>
+<td style="text-align:center">按照一定正则规则校验出来的数据</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>这些规则都可以在<a href="http://mockjs.com/" target="_blank" rel="noopener">MOCK.js</a>里面找到相对应你想要的，只是在RAP里面你需要按照他的规则改写，比如在<a href="http://mockjs.com/" target="_blank" rel="noopener">MOCK.js</a>里<em>Random.rgb()</em>是随机生成一种rgb颜色色值，而在RAP里面写法是<em>@rgb</em> ，大家有兴趣的可以自行去尝试一下。</p>
+	
 	</div>
 	
 	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
@@ -478,6 +596,13 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
+
+		
+
+		<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
 	
 		</main>
 		

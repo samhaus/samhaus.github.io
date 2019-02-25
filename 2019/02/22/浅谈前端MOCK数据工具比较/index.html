@@ -14,7 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      测试文章标题 | samhaus的博客
+      浅谈前端MOCK数据工具比较 | samhaus的博客
     
   </title>
   <meta name="author" content="samhaus">
@@ -111,7 +111,7 @@
 				<!-- Page title -->
 				<p>
 					
-						当前文章&nbsp;:&nbsp;《测试文章标题》
+						当前文章&nbsp;:&nbsp;《浅谈前端MOCK数据工具比较》
 					
 				</p>
 				<!-- Progress bar -->
@@ -270,8 +270,8 @@
 	
 	<div class="article-title">
 		
-	<a href="/2019/02/22/测试文章标题/" itemprop="url">
-		测试文章标题
+	<a href="/2019/02/22/浅谈前端MOCK数据工具比较/" itemprop="url">
+		浅谈前端MOCK数据工具比较
 	</a>
 
 	</div>
@@ -280,7 +280,7 @@
 		<span>
 			
 	发布于
-	<a href="/2019/02/22/测试文章标题/" itemprop="url">
+	<a href="/2019/02/22/浅谈前端MOCK数据工具比较/" itemprop="url">
 		<time datetime="2019-02-22T09:21:21.000Z" itemprop="datePublished">
 	  		2019-02-22
 	  </time>
@@ -288,9 +288,9 @@
 
 	/
 	更新于
-	<a href="/2019/02/22/测试文章标题/" itemprop="url">
+	<a href="/2019/02/22/浅谈前端MOCK数据工具比较/" itemprop="url">
 		<time datetime="2019-02-22T09:21:21.000Z" itemprop="dateUpdated">
-	  		2019-02-22
+	  		2019-02-25
 	  </time>
 	</a> 	
 
@@ -303,7 +303,7 @@
 		/
 		
 
-    <span class="leancloud_visitors" id="/2019/02/22/测试文章标题/_visitors" data-url="/2019/02/22/测试文章标题/" data-title="测试文章标题">
+    <span class="leancloud_visitors" id="/2019/02/22/浅谈前端MOCK数据工具比较/_visitors" data-url="/2019/02/22/浅谈前端MOCK数据工具比较/" data-title="浅谈前端MOCK数据工具比较">
         热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
     </span>
@@ -312,7 +312,7 @@
 
 
 
-    <span class="leancloud_likes" id="/2019/02/22/测试文章标题/_likes" data-url="/2019/02/22/测试文章标题/" data-title="测试文章标题" rel="unlike">
+    <span class="leancloud_likes" id="/2019/02/22/浅谈前端MOCK数据工具比较/_likes" data-url="/2019/02/22/浅谈前端MOCK数据工具比较/" data-title="浅谈前端MOCK数据工具比较" rel="unlike">
         喜欢
         <i class="fa fa-heart"></i>
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -321,7 +321,90 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-			
+		<blockquote>
+<h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p> 目前的前后端开发中比较常采用前后端分离的做法，而前后端分离在沟通和联调方面又时长会有障碍，比如前后端进度不一、前后端联调时间较短、前后端沟通麻烦（跨地区、跨时区等等）。目前为了解决这个问题，最常用的就是通过Mock数据的方式来解决。而我们需要的是一个Web可视化接口管理工具，开源免费，接口稳定、数据自动生成，有权限管理，最好能支持自动化测试、动态切换环境等。</p>
+</blockquote>
+<h3 id="我们主要来对比下阿里妈妈的-RAP（最新升级版已经到RAP2）和丁香园的-api-mocker版本，两家都有线上版本和线下部署版本"><a href="#我们主要来对比下阿里妈妈的-RAP（最新升级版已经到RAP2）和丁香园的-api-mocker版本，两家都有线上版本和线下部署版本" class="headerlink" title="我们主要来对比下阿里妈妈的 RAP（最新升级版已经到RAP2）和丁香园的 api-mocker版本，两家都有线上版本和线下部署版本."></a>我们主要来对比下阿里妈妈的 <a href="https://github.com/thx/RAP" target="_blank" rel="noopener">RAP</a>（最新升级版已经到<a href="https://github.com/thx/rap2-delos" target="_blank" rel="noopener">RAP2</a>）和丁香园的 <a href="https://github.com/DXY-F2E/api-mocker" target="_blank" rel="noopener">api-mocker</a>版本，两家都有线上版本和线下部署版本.</h3><ul>
+<li><h3 id="线上版本体验戳我RAP2-amp-amp-api-mocker。"><a href="#线上版本体验戳我RAP2-amp-amp-api-mocker。" class="headerlink" title="线上版本体验戳我RAP2&amp;&amp;api-mocker。"></a>线上版本体验戳我<a href="http://rapapi.org/org/index.do" target="_blank" rel="noopener">RAP2</a>&amp;&amp;<a href="http://api-mocker.com/" target="_blank" rel="noopener">api-mocker</a>。</h3></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th style="text-align:center">RAP2（阿里）</th>
+<th style="text-align:center">api-mocker（丁香园）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>在线使用</td>
+<td style="text-align:center">服务稳定，适合企业、团队合作，可以直接在线使用（RAP2）</td>
+<td style="text-align:center">线上接口不稳定，且不具保密性，不建议直接使用（好像服务又崩了QAQ）</td>
+</tr>
+<tr>
+<td>应用范围</td>
+<td style="text-align:center">知名度广</td>
+<td style="text-align:center">知名度较小</td>
+</tr>
+<tr>
+<td>页面友好</td>
+<td style="text-align:center">友好程度一般</td>
+<td style="text-align:center">友好性较好</td>
+</tr>
+<tr>
+<td>主要搭建环境</td>
+<td style="text-align:center">Node.js 8.9.4+、MySQL 5.7+、Redis 4.0+</td>
+<td style="text-align:center">MongoDB+vue+Nginx（或tomcat）等</td>
+</tr>
+<tr>
+<td>拓展语法</td>
+<td style="text-align:center">支持Mock.js写法，可以随机mock假数据</td>
+<td style="text-align:center">支持Mock.js写法，可以随机mock假数据</td>
+</tr>
+<tr>
+<td>接口名</td>
+<td style="text-align:center">可自定义接口地址后缀名</td>
+<td style="text-align:center">随机生成后缀</td>
+</tr>
+<tr>
+<td>代理</td>
+<td style="text-align:center">貌似没有</td>
+<td style="text-align:center">可代理转发线上线下地址，便于不同环境切换</td>
+</tr>
+<tr>
+<td>插件拓展</td>
+<td style="text-align:center">支持Kissy和jQuery插件</td>
+<td style="text-align:center">貌似没有</td>
+</tr>
+<tr>
+<td>权限分配</td>
+<td style="text-align:center">权限管理能力强大</td>
+<td style="text-align:center">没有团队管理，仅有接口读写权限管理</td>
+</tr>
+<tr>
+<td>接口文档</td>
+<td style="text-align:center">貌似没有</td>
+<td style="text-align:center">自动生成接口文档、可订阅接口变更邮件提醒</td>
+</tr>
+<tr>
+<td>接口状态模拟</td>
+<td style="text-align:center">生成接口时设定requestStatus</td>
+<td style="text-align:center">模拟切换不同requestStatus(同一接口不同状态切换)、模拟接口延迟等</td>
+</tr>
+<tr>
+<td>适用场景</td>
+<td style="text-align:center">适合企业、大团队合作</td>
+<td style="text-align:center">适合个人、小团队使用</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p> 从上面的对比来看，在mock数据方面，似乎RAP2更侧重mock数据专业能力方面，专业性非常扎实，而api-mocker则是在RAP基础上进一步开发的工具，它更倾向于功能拓展，对用户更加友好，例如不同环境切换、邮件订阅等，同时也考虑到了不同网络使用场景，例如接口延迟，requestStatus等。</p>
+</blockquote>
+<hr>
+<p><strong>这里我比较倾向于采用阿里的技术方案，主要是考虑到接口后缀名自定义和权限管理这块，当然了我也很喜欢api-mocker的各种人性化方案，要是能跟得上阿里更新的脚步，把这几点不足弥补了就好了。</strong></p>
+<hr>
+	
 	</div>
 	
 	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
@@ -338,8 +421,12 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
+			<a href="/2019/02/22/测试文章2/" title="测试文章标题" rel="prev">
+				&laquo;上一篇
+			</a>
 		
-			<a href="/2019/02/22/测试文章2/" title="测试文章标题" rel="next">
+		
+			<a href="/2019/02/22/hello-world/" title="Hello World" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -354,6 +441,22 @@
 
 <div class="relate-post">
 	<ul>
+		
+				<li>
+					<div>
+						<a href="/2019/02/22/测试文章2/" title="测试文章标题">
+							测试文章标题
+						</a>
+						<p>
+							
+						</p>
+					</div>
+
+					<a href="/2019/02/22/测试文章2/" title="测试文章标题">				
+						<img src="/img/cart_cover.jpg" class="relateImg" alt="测试文章标题">
+					</a>
+				</li>											
+		
 		
 				<li>
 					<div>
@@ -461,6 +564,13 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
+
+		
+
+		<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
 	
 		</main>
 		

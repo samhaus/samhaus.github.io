@@ -14,7 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      RAP简介教程&amp;常用规则 | samhaus的博客
+      移动端html展示word文档转换方法 | samhaus的博客
     
   </title>
   <meta name="author" content="samhaus">
@@ -111,7 +111,7 @@
 				<!-- Page title -->
 				<p>
 					
-						当前文章&nbsp;:&nbsp;《RAP简介教程&amp;常用规则》
+						当前文章&nbsp;:&nbsp;《移动端html展示word文档转换方法》
 					
 				</p>
 				<!-- Progress bar -->
@@ -270,8 +270,8 @@
 	
 	<div class="article-title">
 		
-	<a href="/2019/02/22/RAP简介教程&常用规则/" itemprop="url">
-		RAP简介教程&amp;常用规则
+	<a href="/2019/03/23/移动端html展示word文档转换方法/" itemprop="url">
+		移动端html展示word文档转换方法
 	</a>
 
 	</div>
@@ -280,16 +280,16 @@
 		<span>
 			
 	发布于
-	<a href="/2019/02/22/RAP简介教程&常用规则/" itemprop="url">
-		<time datetime="2019-02-22T09:21:21.000Z" itemprop="datePublished">
-	  		2019-02-22
+	<a href="/2019/03/23/移动端html展示word文档转换方法/" itemprop="url">
+		<time datetime="2019-03-23T09:21:21.000Z" itemprop="datePublished">
+	  		2019-03-23
 	  </time>
 	</a> 
 
 	/
 	更新于
-	<a href="/2019/02/22/RAP简介教程&常用规则/" itemprop="url">
-		<time datetime="2019-02-22T09:21:21.000Z" itemprop="dateUpdated">
+	<a href="/2019/03/23/移动端html展示word文档转换方法/" itemprop="url">
+		<time datetime="2019-03-23T09:21:21.000Z" itemprop="dateUpdated">
 	  		2019-03-23
 	  </time>
 	</a> 	
@@ -300,8 +300,8 @@
 			<i class="fa fa-tags"></i>
 			
 	
-		<a href="/tags/工具使用/" class=" ">
-			工具使用
+		<a href="/tags/h5/" class=" ">
+			h5
 		</a>
 	
 		
@@ -309,7 +309,7 @@
 		/
 		
 
-    <span class="leancloud_visitors" id="/2019/02/22/RAP简介教程&常用规则/_visitors" data-url="/2019/02/22/RAP简介教程&常用规则/" data-title="RAP简介教程&常用规则">
+    <span class="leancloud_visitors" id="/2019/03/23/移动端html展示word文档转换方法/_visitors" data-url="/2019/03/23/移动端html展示word文档转换方法/" data-title="移动端html展示word文档转换方法">
         热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
     </span>
@@ -318,7 +318,7 @@
 
 
 
-    <span class="leancloud_likes" id="/2019/02/22/RAP简介教程&常用规则/_likes" data-url="/2019/02/22/RAP简介教程&常用规则/" data-title="RAP简介教程&常用规则" rel="unlike">
+    <span class="leancloud_likes" id="/2019/03/23/移动端html展示word文档转换方法/_likes" data-url="/2019/03/23/移动端html展示word文档转换方法/" data-title="移动端html展示word文档转换方法" rel="unlike">
         喜欢
         <i class="fa fa-heart"></i>
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -328,123 +328,48 @@
 
 	<div class="article-content" id="article-content">
 		<blockquote>
-<h3 id="上篇文章浅谈了mock数据的工具对比，在实际使用过程中，需要mock的数据包含各种语法规则、数据规律等等，最完善的规则建议还是参考MOCK-js教程，但是，这里就需要了解下RAP在使用时常用的一些写法了。"><a href="#上篇文章浅谈了mock数据的工具对比，在实际使用过程中，需要mock的数据包含各种语法规则、数据规律等等，最完善的规则建议还是参考MOCK-js教程，但是，这里就需要了解下RAP在使用时常用的一些写法了。" class="headerlink" title="上篇文章浅谈了mock数据的工具对比，在实际使用过程中，需要mock的数据包含各种语法规则、数据规律等等，最完善的规则建议还是参考MOCK.js教程，但是，这里就需要了解下RAP在使用时常用的一些写法了。"></a><a href="https://juejin.im/post/5bd1b630e51d457a544d2ec7" target="_blank" rel="noopener">上篇文章</a>浅谈了mock数据的工具对比，在实际使用过程中，需要mock的数据包含各种语法规则、数据规律等等，最完善的规则建议还是参考<a href="http://mockjs.com/" target="_blank" rel="noopener">MOCK.js</a>教程，但是，这里就需要了解下RAP在使用时常用的一些写法了。</h3></blockquote>
-<p>首先我们先看下RAP的整个页面：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4332108-f97e09cc3d6072b8?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="空白接口页面"><br>日常使用主要涉及几个模块：</p>
+<h3 id="需求："><a href="#需求：" class="headerlink" title="需求："></a>需求：</h3></blockquote>
+<h5 id="把几份word文档（需求说明、法规文件等等）放到手机端，需要用h5的形式展示出来。"><a href="#把几份word文档（需求说明、法规文件等等）放到手机端，需要用h5的形式展示出来。" class="headerlink" title="把几份word文档（需求说明、法规文件等等）放到手机端，需要用h5的形式展示出来。"></a>把几份word文档（需求说明、法规文件等等）放到手机端，需要用h5的形式展示出来。</h5><h3 id="方法一、自己写成html标签的段落："><a href="#方法一、自己写成html标签的段落：" class="headerlink" title="方法一、自己写成html标签的段落："></a>方法一、自己写成html标签的段落：</h3><p>话不多说，show my code：</p>
+<pre><code>var content=&quot;  该模型描述水质组分的迁移变化在两个方向上是重要的，
+&lt;br/&gt;   在另外一个方向上是均匀分布的，这种水质模型称为二维水质模型。 &quot; +
+&quot;&lt;pre&gt;&lt;img class=&#39;imgDiv&#39; src=&#39;../../img/ic_erwei_water1.png&#39;&gt;&quot; +
+&quot;&lt;pre&gt;&lt;br/&gt;二维稳态混合模型公式：&quot; +
+&quot;&lt;pre&gt;&lt;img class=&#39;imgDiv&#39; src=&#39;../../img/ic_erwei_water2.png&#39;&gt;&quot; +
+&quot;&lt;pre&gt;&lt;br/&gt;适用条件：&quot; +
+&quot;&lt;br/&gt; ① 平直、断面形状规则河流混合过程段；&quot; +
+&quot;&lt;br/&gt; ② 持久性污染物；&quot; +
+&quot;&lt;br/&gt; ③ 河流稳定流动；&quot; +
+&quot;&lt;br/&gt; ④ 连续稳定排放；&quot; +
+&quot;&lt;br/&gt; ⑤ 对于非持久性污染物，需采用相应的衰减模式。&quot;,
+</code></pre><p>预览效果还是不错的，是这样的：<br><img src="https://upload-images.jianshu.io/upload_images/4332108-030568a920d5be6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h5 id="我用Angular写的-具体操作是："><a href="#我用Angular写的-具体操作是：" class="headerlink" title="我用Angular写的 具体操作是："></a>我用Angular写的 具体操作是：</h5><ol>
+<li>在控制器初始化的时候添加<code>$sce</code>参数：<pre><code>myModule.controller(&quot;MyCtrl&quot;, function ($scope, $sce) {
+}
+</code></pre></li>
+<li>使得content这个<code>div</code>能解释出html标签：<pre><code> $scope.toHTML = function (content) {
+     return $sce.trustAsHtml(content);
+ };
+</code></pre><ol start="3">
+<li>先在html写一个<code>toHTML()</code>绑定方法：<pre><code>&lt;div ng-bind-html=toHTML(content)&gt;&lt;/div&gt;
+</code></pre>这样我们得到的html文本就可以解析出标签了。</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h3 id="方法二、直接把word文件转成‘html’文件："><a href="#方法二、直接把word文件转成‘html’文件：" class="headerlink" title="方法二、直接把word文件转成‘html’文件："></a>方法二、直接把word文件转成‘html’文件：</h3><p>这里呢又有有两个方法了：</p>
 <ul>
-<li><h3 id="接口简介"><a href="#接口简介" class="headerlink" title="接口简介"></a>接口简介</h3></li>
+<li>1.直接转化为html文件，直接打开即可。</li>
 </ul>
-<p><strong>主要是接口地址、接口类型等等</strong><br><img src="http://upload-images.jianshu.io/upload_images/4332108-6b6d91e8ecc42878?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<ul>
-<li><h3 id="请求参数"><a href="#请求参数" class="headerlink" title="请求参数"></a>请求参数</h3><blockquote>
-<p>可以分为三类：</p>
-<ul>
-<li>1、headers:一般头部放置验证参数等，例如cookie、token等</li>
-<li>2、Query Params:常用是get方式请求，用于校验请求参数</li>
-<li>3、Body Params：常用是post方式请求，用于校验请求参数</li>
-</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/4332108-298554896f3adf24.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<blockquote>
+<p> <strong>注意 :</strong><br>不要转化为“网页（.htm）”，而是要“筛选过的网页（.htm）”。因为前者会生成html文件、资源文件夹等等几个文件，而后者是我们比较熟悉的东西，如果是纯文本还是后者好一些。</p>
 </blockquote>
-</li>
-<li><h3 id="响应参数"><a href="#响应参数" class="headerlink" title="响应参数"></a>响应参数</h3><p><strong>接口请求成功以后的返回参数</strong></p>
-<h3 id="而参数一般有两种方式导入："><a href="#而参数一般有两种方式导入：" class="headerlink" title="而参数一般有两种方式导入："></a>而参数一般有两种方式导入：</h3></li>
-<li><p>单个参数导入：<br>主要是<strong>名称</strong>、<strong>类型</strong>、<strong>生成规则</strong>、<strong>初始值</strong>、<strong>简介</strong>这几个，这里的生成规则就需要一些按照一些特定规则来了。<br><img src="http://upload-images.jianshu.io/upload_images/4332108-a8477dd9a2ab5a8f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="单个参数导入"></p>
-</li>
-<li><p>还有一种是直接导入一个<strong>Json字符串</strong>，系统会直接帮我们转化成相对应的参数格式：</p>
-</li>
+<ul>
+<li>2.先将word文件按照“网页（.htm）”方式转换，会产生一个网页文件和一个图片文件夹。这时将所有的文档都关掉，将产生的新网页文件打开。然后全选（ctrl＋a，ctrl＋c）网页内容。新建一个word文件，让后将内容拷贝其中（ctrl＋v）,然后在将这个文件转为 单个网页文件。这时你会惊奇的发现，新产生的单个文件的网页的大小已经变的很小了（摘抄自网上）。</li>
 </ul>
-<pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">{</span>
-    <span class="token property">"code"</span><span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
-    <span class="token property">"data"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-        <span class="token property">"entries"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-            <span class="token punctuation">{</span>
-                <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"上海市"</span><span class="token punctuation">,</span>
-                <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">2</span>
-            <span class="token punctuation">}</span><span class="token punctuation">,</span>
-            <span class="token punctuation">{</span>
-                <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"闵行区"</span><span class="token punctuation">,</span>
-                <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">3</span>
-            <span class="token punctuation">}</span><span class="token punctuation">,</span>
-            <span class="token punctuation">{</span>
-                <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"长宁区"</span><span class="token punctuation">,</span>
-                <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">6</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">]</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="http://upload-images.jianshu.io/upload_images/4332108-3f29e26759d3b5f3?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="直接导入Json字符串"><br>这样就可以直接生成一个返回模板：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4332108-253a3276a8bc5316?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br>但是此时和我们要使用的参数可能还是有出入，那么我们就可以直接在响应内容的表格内作相对应的修改了，例如修改对应参数<strong>生成规则、初始值</strong>等，去自定义参数生成你想要的值。写完记得右上角的保存哦。</p>
 <hr>
-<hr>
-<h2 id="重要-这里整理了常用参数的规则写法-骚操作-，感兴趣可以收藏当做便利贴："><a href="#重要-这里整理了常用参数的规则写法-骚操作-，感兴趣可以收藏当做便利贴：" class="headerlink" title="(重要)这里整理了常用参数的规则写法(骚操作)，感兴趣可以收藏当做便利贴："></a>(重要)这里整理了常用参数的规则写法(骚操作)，感兴趣可以收藏当做便利贴：</h2><p><img src="http://upload-images.jianshu.io/upload_images/4332108-3c04e2ee2f4d1267?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="官方demo在线实例"></p>
-<h4 id="官方demo在线实例已经有一些各种类型的示例，我们这里做一些常用的补充："><a href="#官方demo在线实例已经有一些各种类型的示例，我们这里做一些常用的补充：" class="headerlink" title="官方demo在线实例已经有一些各种类型的示例，我们这里做一些常用的补充："></a>官方demo在线实例已经有一些各种类型的示例，我们这里做一些常用的补充：</h4><table>
-<thead>
-<tr>
-<th>类型</th>
-<th style="text-align:center">写法</th>
-<th style="text-align:center">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>String</td>
-<td style="text-align:center">1-10</td>
-<td style="text-align:center">生成一个长度为1-10位的字符串（定义初始值后生成的字符串为多次重复该初始值）</td>
-</tr>
-<tr>
-<td>String</td>
-<td style="text-align:center">@order(上海市,长宁区,闵行区,静安区,嘉定区)</td>
-<td style="text-align:center">从数组里随机一个值出来，一般是按照数组顺序排序列出</td>
-</tr>
-<tr>
-<td>String</td>
-<td style="text-align:center">@datetime(“yyyy-MM-dd”)</td>
-<td style="text-align:center">按照一定格式生成的时间字符串，符合‘yyyyMMdd’的生成规则</td>
-</tr>
-<tr>
-<td>String</td>
-<td style="text-align:center">@now</td>
-<td style="text-align:center">当前时间</td>
-</tr>
-<tr>
-<td>String</td>
-<td style="text-align:center">@province</td>
-<td style="text-align:center">随机一个国内省、地区、直辖市名称</td>
-</tr>
-<tr>
-<td>String</td>
-<td style="text-align:center">@city</td>
-<td style="text-align:center">随机一个国内地级市名称</td>
-</tr>
-<tr>
-<td>String</td>
-<td style="text-align:center">@county</td>
-<td style="text-align:center">随机一个县的名称</td>
-</tr>
-<tr>
-<td>String</td>
-<td style="text-align:center">@color()</td>
-<td style="text-align:center">随机生成一种颜色（例如#FF00FF）</td>
-</tr>
-<tr>
-<td>Number</td>
-<td style="text-align:center">@range(2,10)</td>
-<td style="text-align:center">生成一个从2到10的正序数组</td>
-</tr>
-<tr>
-<td>Number</td>
-<td style="text-align:center">@natural(10000, 99999)</td>
-<td style="text-align:center">随机生成一个自然数（比如生成一个ID就可以用），括号里面是它的限制条件</td>
-</tr>
-<tr>
-<td>RegExp</td>
-<td style="text-align:center">/\d{5,10}-/</td>
-<td style="text-align:center">按照一定正则规则校验出来的数据</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<p>这些规则都可以在<a href="http://mockjs.com/" target="_blank" rel="noopener">MOCK.js</a>里面找到相对应你想要的，只是在RAP里面你需要按照他的规则改写，比如在<a href="http://mockjs.com/" target="_blank" rel="noopener">MOCK.js</a>里<em>Random.rgb()</em>是随机生成一种rgb颜色色值，而在RAP里面写法是<em>@rgb</em> ，大家有兴趣的可以自行去尝试一下。</p>
+<p>变成了html文件应该知道怎么弄了吧？和我们自己写的原生html文件一样。当然，直接放到手机里效果是不理想的。我们手动添加一个标题以后会好些。然后给他添加一个点击返回的方法就差不多了。如果对页面字体、间距等有影响可以自行调整。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4332108-32d26a2e64f0331a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
 	
 	</div>
 	
@@ -462,12 +387,12 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/03/23/移动端html展示word文档转换方法/" title="移动端html展示word文档转换方法" rel="prev">
+			<a href="/2019/03/23/玩Android微信小程序版/" title="玩Android微信小程序版" rel="prev">
 				&laquo;上一篇
 			</a>
 		
 		
-			<a href="/2019/02/22/关于Android studio中遇到Library has broken以及mac遇到clean消失问题/" title="关于Android studio中遇到Library has broken以及mac遇到clean消失问题" rel="next">
+			<a href="/2019/02/22/RAP简介教程&常用规则/" title="RAP简介教程&常用规则" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -520,19 +445,18 @@
 		
 				<li>
 					<div>
-						<a href="/2019/03/23/移动端html展示word文档转换方法/" title="移动端html展示word文档转换方法">
-							移动端html展示word文档转换方法
+						<a href="/2019/02/22/RAP简介教程&常用规则/" title="RAP简介教程&常用规则">
+							RAP简介教程&常用规则
 						</a>
 						<p>
 							
-需求：
-把几份word文档（需求说明、法规文件等等）放到手机端，需要用h5的形式展示出来。方法一、自己写成html标签的段落：话不多说，show my code：
-var content=&quot;  该模型描述水质组分的迁移变化...
+上篇文章浅谈了mock数据的工具对比，在实际使用过程中，需要mock的数据包含各种语法规则、数据规律等等，最完善的规则建议还是参考MOCK.js教程，但是，这里就需要了解下RAP在使用时常用的一些写法了。
+首先我们先看下RAP的整个...
 						</p>
 					</div>
 
-					<a href="/2019/03/23/移动端html展示word文档转换方法/" title="移动端html展示word文档转换方法">				
-						<img src="/img/cart_cover.jpg" class="relateImg" alt="移动端html展示word文档转换方法">
+					<a href="/2019/02/22/RAP简介教程&常用规则/" title="RAP简介教程&常用规则">				
+						<img src="/img/cart_cover.jpg" class="relateImg" alt="RAP简介教程&常用规则">
 					</a>
 				</li>											
 		

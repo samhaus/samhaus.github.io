@@ -14,7 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      RAP简介教程&amp;常用规则 | samhaus的博客
+      Android开发百度地图指南针消失问题 | samhaus的博客
     
   </title>
   <meta name="author" content="samhaus">
@@ -111,7 +111,7 @@
 				<!-- Page title -->
 				<p>
 					
-						当前文章&nbsp;:&nbsp;《RAP简介教程&amp;常用规则》
+						当前文章&nbsp;:&nbsp;《Android开发百度地图指南针消失问题》
 					
 				</p>
 				<!-- Progress bar -->
@@ -270,8 +270,8 @@
 	
 	<div class="article-title">
 		
-	<a href="/2019/02/22/RAP简介教程&常用规则/" itemprop="url">
-		RAP简介教程&amp;常用规则
+	<a href="/2019/03/23/Android开发百度地图指南针消失问题/" itemprop="url">
+		Android开发百度地图指南针消失问题
 	</a>
 
 	</div>
@@ -280,16 +280,16 @@
 		<span>
 			
 	发布于
-	<a href="/2019/02/22/RAP简介教程&常用规则/" itemprop="url">
-		<time datetime="2019-02-22T09:21:21.000Z" itemprop="datePublished">
-	  		2019-02-22
+	<a href="/2019/03/23/Android开发百度地图指南针消失问题/" itemprop="url">
+		<time datetime="2019-03-23T09:21:21.000Z" itemprop="datePublished">
+	  		2019-03-23
 	  </time>
 	</a> 
 
 	/
 	更新于
-	<a href="/2019/02/22/RAP简介教程&常用规则/" itemprop="url">
-		<time datetime="2019-02-22T09:21:21.000Z" itemprop="dateUpdated">
+	<a href="/2019/03/23/Android开发百度地图指南针消失问题/" itemprop="url">
+		<time datetime="2019-03-23T09:21:21.000Z" itemprop="dateUpdated">
 	  		2019-03-23
 	  </time>
 	</a> 	
@@ -300,8 +300,8 @@
 			<i class="fa fa-tags"></i>
 			
 	
-		<a href="/tags/工具使用/" class=" ">
-			工具使用
+		<a href="/tags/Android采坑/" class=" ">
+			Android采坑
 		</a>
 	
 		
@@ -309,7 +309,7 @@
 		/
 		
 
-    <span class="leancloud_visitors" id="/2019/02/22/RAP简介教程&常用规则/_visitors" data-url="/2019/02/22/RAP简介教程&常用规则/" data-title="RAP简介教程&常用规则">
+    <span class="leancloud_visitors" id="/2019/03/23/Android开发百度地图指南针消失问题/_visitors" data-url="/2019/03/23/Android开发百度地图指南针消失问题/" data-title="Android开发百度地图指南针消失问题">
         热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
     </span>
@@ -318,7 +318,7 @@
 
 
 
-    <span class="leancloud_likes" id="/2019/02/22/RAP简介教程&常用规则/_likes" data-url="/2019/02/22/RAP简介教程&常用规则/" data-title="RAP简介教程&常用规则" rel="unlike">
+    <span class="leancloud_likes" id="/2019/03/23/Android开发百度地图指南针消失问题/_likes" data-url="/2019/03/23/Android开发百度地图指南针消失问题/" data-title="Android开发百度地图指南针消失问题" rel="unlike">
         喜欢
         <i class="fa fa-heart"></i>
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -328,123 +328,21 @@
 
 	<div class="article-content" id="article-content">
 		<blockquote>
-<h3 id="上篇文章浅谈了mock数据的工具对比，在实际使用过程中，需要mock的数据包含各种语法规则、数据规律等等，最完善的规则建议还是参考MOCK-js教程，但是，这里就需要了解下RAP在使用时常用的一些写法了。"><a href="#上篇文章浅谈了mock数据的工具对比，在实际使用过程中，需要mock的数据包含各种语法规则、数据规律等等，最完善的规则建议还是参考MOCK-js教程，但是，这里就需要了解下RAP在使用时常用的一些写法了。" class="headerlink" title="上篇文章浅谈了mock数据的工具对比，在实际使用过程中，需要mock的数据包含各种语法规则、数据规律等等，最完善的规则建议还是参考MOCK.js教程，但是，这里就需要了解下RAP在使用时常用的一些写法了。"></a><a href="https://juejin.im/post/5bd1b630e51d457a544d2ec7" target="_blank" rel="noopener">上篇文章</a>浅谈了mock数据的工具对比，在实际使用过程中，需要mock的数据包含各种语法规则、数据规律等等，最完善的规则建议还是参考<a href="http://mockjs.com/" target="_blank" rel="noopener">MOCK.js</a>教程，但是，这里就需要了解下RAP在使用时常用的一些写法了。</h3></blockquote>
-<p>首先我们先看下RAP的整个页面：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4332108-f97e09cc3d6072b8?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="空白接口页面"><br>日常使用主要涉及几个模块：</p>
-<ul>
-<li><h3 id="接口简介"><a href="#接口简介" class="headerlink" title="接口简介"></a>接口简介</h3></li>
-</ul>
-<p><strong>主要是接口地址、接口类型等等</strong><br><img src="http://upload-images.jianshu.io/upload_images/4332108-6b6d91e8ecc42878?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<ul>
-<li><h3 id="请求参数"><a href="#请求参数" class="headerlink" title="请求参数"></a>请求参数</h3><blockquote>
-<p>可以分为三类：</p>
-<ul>
-<li>1、headers:一般头部放置验证参数等，例如cookie、token等</li>
-<li>2、Query Params:常用是get方式请求，用于校验请求参数</li>
-<li>3、Body Params：常用是post方式请求，用于校验请求参数</li>
-</ul>
-</blockquote>
-</li>
-<li><h3 id="响应参数"><a href="#响应参数" class="headerlink" title="响应参数"></a>响应参数</h3><p><strong>接口请求成功以后的返回参数</strong></p>
-<h3 id="而参数一般有两种方式导入："><a href="#而参数一般有两种方式导入：" class="headerlink" title="而参数一般有两种方式导入："></a>而参数一般有两种方式导入：</h3></li>
-<li><p>单个参数导入：<br>主要是<strong>名称</strong>、<strong>类型</strong>、<strong>生成规则</strong>、<strong>初始值</strong>、<strong>简介</strong>这几个，这里的生成规则就需要一些按照一些特定规则来了。<br><img src="http://upload-images.jianshu.io/upload_images/4332108-a8477dd9a2ab5a8f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="单个参数导入"></p>
-</li>
-<li><p>还有一种是直接导入一个<strong>Json字符串</strong>，系统会直接帮我们转化成相对应的参数格式：</p>
-</li>
-</ul>
-<pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">{</span>
-    <span class="token property">"code"</span><span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
-    <span class="token property">"data"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-        <span class="token property">"entries"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-            <span class="token punctuation">{</span>
-                <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"上海市"</span><span class="token punctuation">,</span>
-                <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">2</span>
-            <span class="token punctuation">}</span><span class="token punctuation">,</span>
-            <span class="token punctuation">{</span>
-                <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"闵行区"</span><span class="token punctuation">,</span>
-                <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">3</span>
-            <span class="token punctuation">}</span><span class="token punctuation">,</span>
-            <span class="token punctuation">{</span>
-                <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"长宁区"</span><span class="token punctuation">,</span>
-                <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">6</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">]</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="http://upload-images.jianshu.io/upload_images/4332108-3f29e26759d3b5f3?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="直接导入Json字符串"><br>这样就可以直接生成一个返回模板：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4332108-253a3276a8bc5316?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br>但是此时和我们要使用的参数可能还是有出入，那么我们就可以直接在响应内容的表格内作相对应的修改了，例如修改对应参数<strong>生成规则、初始值</strong>等，去自定义参数生成你想要的值。写完记得右上角的保存哦。</p>
-<hr>
-<hr>
-<h2 id="重要-这里整理了常用参数的规则写法-骚操作-，感兴趣可以收藏当做便利贴："><a href="#重要-这里整理了常用参数的规则写法-骚操作-，感兴趣可以收藏当做便利贴：" class="headerlink" title="(重要)这里整理了常用参数的规则写法(骚操作)，感兴趣可以收藏当做便利贴："></a>(重要)这里整理了常用参数的规则写法(骚操作)，感兴趣可以收藏当做便利贴：</h2><p><img src="http://upload-images.jianshu.io/upload_images/4332108-3c04e2ee2f4d1267?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="官方demo在线实例"></p>
-<h4 id="官方demo在线实例已经有一些各种类型的示例，我们这里做一些常用的补充："><a href="#官方demo在线实例已经有一些各种类型的示例，我们这里做一些常用的补充：" class="headerlink" title="官方demo在线实例已经有一些各种类型的示例，我们这里做一些常用的补充："></a>官方demo在线实例已经有一些各种类型的示例，我们这里做一些常用的补充：</h4><table>
-<thead>
-<tr>
-<th>类型</th>
-<th style="text-align:center">写法</th>
-<th style="text-align:center">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>String</td>
-<td style="text-align:center">1-10</td>
-<td style="text-align:center">生成一个长度为1-10位的字符串（定义初始值后生成的字符串为多次重复该初始值）</td>
-</tr>
-<tr>
-<td>String</td>
-<td style="text-align:center">@order(上海市,长宁区,闵行区,静安区,嘉定区)</td>
-<td style="text-align:center">从数组里随机一个值出来，一般是按照数组顺序排序列出</td>
-</tr>
-<tr>
-<td>String</td>
-<td style="text-align:center">@datetime(“yyyy-MM-dd”)</td>
-<td style="text-align:center">按照一定格式生成的时间字符串，符合‘yyyyMMdd’的生成规则</td>
-</tr>
-<tr>
-<td>String</td>
-<td style="text-align:center">@now</td>
-<td style="text-align:center">当前时间</td>
-</tr>
-<tr>
-<td>String</td>
-<td style="text-align:center">@province</td>
-<td style="text-align:center">随机一个国内省、地区、直辖市名称</td>
-</tr>
-<tr>
-<td>String</td>
-<td style="text-align:center">@city</td>
-<td style="text-align:center">随机一个国内地级市名称</td>
-</tr>
-<tr>
-<td>String</td>
-<td style="text-align:center">@county</td>
-<td style="text-align:center">随机一个县的名称</td>
-</tr>
-<tr>
-<td>String</td>
-<td style="text-align:center">@color()</td>
-<td style="text-align:center">随机生成一种颜色（例如#FF00FF）</td>
-</tr>
-<tr>
-<td>Number</td>
-<td style="text-align:center">@range(2,10)</td>
-<td style="text-align:center">生成一个从2到10的正序数组</td>
-</tr>
-<tr>
-<td>Number</td>
-<td style="text-align:center">@natural(10000, 99999)</td>
-<td style="text-align:center">随机生成一个自然数（比如生成一个ID就可以用），括号里面是它的限制条件</td>
-</tr>
-<tr>
-<td>RegExp</td>
-<td style="text-align:center">/\d{5,10}-/</td>
-<td style="text-align:center">按照一定正则规则校验出来的数据</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<p>这些规则都可以在<a href="http://mockjs.com/" target="_blank" rel="noopener">MOCK.js</a>里面找到相对应你想要的，只是在RAP里面你需要按照他的规则改写，比如在<a href="http://mockjs.com/" target="_blank" rel="noopener">MOCK.js</a>里<em>Random.rgb()</em>是随机生成一种rgb颜色色值，而在RAP里面写法是<em>@rgb</em> ，大家有兴趣的可以自行去尝试一下。</p>
+<pre><code>   发现最近接手的项目跟百度地图干上了，从2014年的V3.xx版本到现在的最新版，踩了不知道没踩过的多少坑。今天在维护一个2014年的老项目的时候，反馈有一条“指南针不显示，旋转后无法复位”。好吧，由于是老项目，第一个我们考虑的应该是版本问题了。
+</code></pre></blockquote>
+<pre><code>    为什么说要先考虑版本问题呢，因为百度坑啊，百度版本不兼容啊 吧啦吧啦的。。（我这样一直黑百度会不会被百度拉黑呢，我还一直想进大厂呢，哭瞎）。
+</code></pre><p>旧版本的jar包<br>废话不多说，我把项目拉出来，换上了最新的jar包们，run走起。不出所料果然没反应，有反应我还写这篇文章干啥。</p>
+<p>这里换上了新版本jar包<br>        于是在我做过的N个项目里，我又扒出一个正常显示指南针的码田，一行行看了下去，emmmm，去你的看不下去。于是我又产生了一个新的想法，emmmm我TM脑洞还是足够大：会不会是自定义图层层叠导致的遮盖呢？你别说，这玩意想起来还真有点道理。毕竟APP第一次安装后，打开页面是有指南针的，后面退出这个activity以后，再也不会显示了。我想肯定是我经过了各种操作本地缓存了啥或者XXX的，一通什么操作才导致的不显示指南针。对没错肯定是我的问题。QAQ</p>
+<p>百度官方文档关于图层层叠解释<br>        于是我抽丝剥茧，把整个activity所有方法都注释了以后：</p>
+<p>只保留了百度地图初始化的一些操作<br>        果不其然，还是不行。难道是我注释的不够干净？？也不是不可能嘛，人总是要怀疑下自己。这时候根据以往的经验，我意识到了事情有点不对。怎么我以前写的就行呢！这TM不会是玄学问题吧？</p>
+<pre><code>    新拉出来一个页面，一个个测试。网上关于这些问题说的最多的解决方案也是唯一的解决方案就是：
+</code></pre><p>百度官方文档对于指南针开关的方法<br>首先，这个是默认开启的，不需要我们手动开启（很人性化QAQ）。那么为什么还是没显示出来呢？我是不指望看百度源码了</p>
+<p>一堆abcdefg<br>那么，会不会和定位有关系呢？毕竟我之前的项目都是和定位相关。emmm不知道是我没找到还是咋的，百度官方在定位的文档斌没有提到指南针问题。毕竟这不是导航，没有指南针也是无可厚非嘛。</p>
+<p>定位初始化的n段代码<br>在尝试了N种搭配以后，通过不断打印mBaiduMap.getUiSettings().isCompassEnabled()以后，我发现的确，默认指南针都是开启的，那么我就先把它关掉试试：</p>
+<p>在初始化的时候关掉指南针<br>这时候依旧没有出现指南针，那么我们就多次尝试嘛：在定位后会不会有骚操作呢？于是我在定位后又写了一遍这个代码。果不其然，并没有任何效果。那么我们再打开试试呢？</p>
+<p>我们可爱的指南针又回来啦<br>        诶？真的是骚操作诶，靠腰哦。</p>
+<p>注意一点，定位的最后一句，mLocClient.start();不可以去掉，亲测。</p>
+<p>总结一句：查阅了之前的代码也是地图和定位相结合，但是并没有发现与setCompassEnabled相关的字段，所以这种坑，想要找到解决方法并不简单。我判断可能是由于地图和定位是两个团队开发？所以里面肯定在某些方面有些冲突不兼容的现象，我们在初始化先关闭指南针，定位以后重新打开就可以正常啦，如果有小伙伴也遇到这个问题，可以尝试一下这个解决方案。</p>
 	
 	</div>
 	
@@ -462,12 +360,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/03/23/移动端html展示word文档转换方法/" title="移动端html展示word文档转换方法" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/02/22/关于Android studio中遇到Library has broken以及mac遇到clean消失问题/" title="关于Android studio中遇到Library has broken以及mac遇到clean消失问题" rel="next">
+			<a href="/2019/03/23/玩Android微信小程序版/" title="玩Android微信小程序版" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -485,17 +379,17 @@
 		
 				<li>
 					<div>
-						<a href="/2019/03/23/Android开发百度地图指南针消失问题/" title="Android开发百度地图指南针消失问题">
-							Android开发百度地图指南针消失问题
+						<a href="/2019/02/22/关于Android studio中遇到Library has broken以及mac遇到clean消失问题/" title="关于Android studio中遇到Library has broken以及mac遇到clean消失问题">
+							关于Android studio中遇到Library has broken以及mac遇到clean消失问题
 						</a>
 						<p>
 							
-   发现最近接手的项目跟百度地图干上了，从2014年的V3.xx版本到现在的最新版，踩了不知道没踩过的多少坑。今天在维护一个2014年的老项目的时候，反馈有一条“指南针不显示，旋转后无法复位”。好吧，由于是老项目，第一个我们考虑的...
+    今天在神坑百度地图版本问题上又踩到了一个坑。由于原先公司某个老项目中百度地图停留在两三年前某个老版版本，今年又翻出来丢给我迭代开发，于是找个了新版本百度地图jar包和so库放进去。当然，jar包和so库是需要配套使用的，由于...
 						</p>
 					</div>
 
-					<a href="/2019/03/23/Android开发百度地图指南针消失问题/" title="Android开发百度地图指南针消失问题">				
-						<img src="/img/cart_cover.jpg" class="relateImg" alt="Android开发百度地图指南针消失问题">
+					<a href="/2019/02/22/关于Android studio中遇到Library has broken以及mac遇到clean消失问题/" title="关于Android studio中遇到Library has broken以及mac遇到clean消失问题">				
+						<img src="/img/cart_cover.jpg" class="relateImg" alt="关于Android studio中遇到Library has broken以及mac遇到clean消失问题">
 					</a>
 				</li>											
 		
@@ -539,17 +433,18 @@ var content=&quot;  该模型描述水质组分的迁移变化...
 		
 				<li>
 					<div>
-						<a href="/2019/02/22/关于Android studio中遇到Library has broken以及mac遇到clean消失问题/" title="关于Android studio中遇到Library has broken以及mac遇到clean消失问题">
-							关于Android studio中遇到Library has broken以及mac遇到clean消失问题
+						<a href="/2019/02/22/RAP简介教程&常用规则/" title="RAP简介教程&常用规则">
+							RAP简介教程&常用规则
 						</a>
 						<p>
 							
-    今天在神坑百度地图版本问题上又踩到了一个坑。由于原先公司某个老项目中百度地图停留在两三年前某个老版版本，今年又翻出来丢给我迭代开发，于是找个了新版本百度地图jar包和so库放进去。当然，jar包和so库是需要配套使用的，由于...
+上篇文章浅谈了mock数据的工具对比，在实际使用过程中，需要mock的数据包含各种语法规则、数据规律等等，最完善的规则建议还是参考MOCK.js教程，但是，这里就需要了解下RAP在使用时常用的一些写法了。
+首先我们先看下RAP的整个...
 						</p>
 					</div>
 
-					<a href="/2019/02/22/关于Android studio中遇到Library has broken以及mac遇到clean消失问题/" title="关于Android studio中遇到Library has broken以及mac遇到clean消失问题">				
-						<img src="/img/cart_cover.jpg" class="relateImg" alt="关于Android studio中遇到Library has broken以及mac遇到clean消失问题">
+					<a href="/2019/02/22/RAP简介教程&常用规则/" title="RAP简介教程&常用规则">				
+						<img src="/img/cart_cover.jpg" class="relateImg" alt="RAP简介教程&常用规则">
 					</a>
 				</li>											
 		
@@ -661,13 +556,6 @@ var content=&quot;  该模型描述水质组分的迁移变化...
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
-
-		
-
-		<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
-		<script src="/plugin/toc/katelog.min.js"></script>
-
-		
 	
 		</main>
 		

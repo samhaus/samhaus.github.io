@@ -1,0 +1,771 @@
+<!--
+	作者：Sariay
+	时间：2018-09-25
+	描述：There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!
+-->
+
+	<!DOCTYPE html>
+	<html class="scrollbar">
+		
+
+<head><meta name="generator" content="Hexo 3.8.0">
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      玩Android微信小程序版 | samhaus的博客
+    
+  </title>
+  <meta name="author" content="samhaus">
+  <meta name="keywords" content="Android,flutter,mui,hybird,vue,jquery,html5,小程序,开发者,程序猿,用户体验,极客,代码,开源,IT,Developer,Programmer,Coder,Geek,js,html,css,dart">
+  <meta name="description" content="愿荒诞流年，执墨一世晾黑白">
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+    <!-- jquery -->
+	<script src="/js/jquery-2.1.1.min.js"></script>
+
+  <!-- leancloud -->
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script src="/js/leancloud.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="transition">
+					<div class="three-bounce1"></div>
+					<div class="three-bounce2"></div>
+					<div class="three-bounce3"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground" data-img-mode="normal" data-normal-src="/img/1.jpg" data-random-max="110" data-random-src="https://sariay.github.io/Random-img/">
+	<div class="mask">
+		<div class="h-header">
+			<div id="logo-S">
+				
+					<a href="/">
+						<img src="/img/logo.png" alt="Logo">
+					</a>
+				
+			</div>
+			<!-- Navigation in header(id="navigation-S") -->
+			<div id="navigation-S">
+				<ul>
+					
+						<li class="menu-home">
+							<a href="/" class="menu-item-home">主页</a>
+						</li>
+					
+						<li class="menu-archive">
+							<a href="/archives" class="menu-item-archive">归档</a>
+						</li>
+					
+						<li class="menu-categories">
+							<a href="/categories" class="menu-item-categories">分类</a>
+						</li>
+					
+						<li class="menu-tags">
+							<a href="/tags" class="menu-item-tags">标签</a>
+						</li>
+					
+						<li class="menu-about">
+							<a href="/about" class="menu-item-about">关于</a>
+						</li>
+					
+						<li class="menu-gallery">
+							<a href="/gallery" class="menu-item-gallery">相册</a>
+						</li>
+					
+
+					
+				</ul>			
+			</div>				
+		</div>
+
+		<div class="h-body">	
+			<!-- motto -->
+			
+				<div id="page-motto">
+					<p class="motto">
+						
+					</p>
+				</div>
+			
+
+			<div id="navigation-H">
+				<!-- Page title -->
+				<p>
+					
+						当前文章&nbsp;:&nbsp;《玩Android微信小程序版》
+					
+				</p>
+				<!-- Progress bar -->
+				<div id="progress-bar"></div>
+
+				<!-- Progress percent -->
+				<div id="progress-percentage">
+					<h1>0.0%</h1>
+				</div>
+			</div>
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<ul>
+				<li>
+					<a><i class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>切换背景</a>
+				</li>
+				<li>
+					<a href="javascript:;" id="read-more"><i class="fa fa-angle-double-down"></i>继续阅读</a>
+				</li>
+				<li>
+					<a href="https://github.com/Sariay/hexo-theme-Annie" target="_blank"><i class="fa fa-download"></i>克隆主题</a>
+				</li>
+			</ul>
+		</div>
+		
+		<!-- This is only a demo, please go to "https://time.is" to set your city time! -->
+<style type="text/css">
+	.header-date {
+		position: absolute;
+		left: 40px;
+		bottom: 30px;
+		writing-mode: tb-rl;
+		font-size: 36px;
+	}	
+	.header-date a {
+		border-bottom: none;
+	}
+	@media only screen and (max-width: 768 ) {
+		.header-date {
+			position: absolute;
+			left: 40px;
+			bottom: 30px;
+			writing-mode: tb-rl;
+			font-size: 20px;
+		}			
+	}
+</style>
+<div class="header-date">
+	<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow"></a>
+	<span id="Beijing_z43d"></span>
+</div>
+<script src="//widget.time.is/zh.js"></script>
+<script>
+	time_is_widget.init({
+		Beijing_z43d:{
+			template:"DATE", 
+			date_format:"year年 monthname dnum日"
+		}
+	});
+</script>
+</div></header>
+
+<!-- Navigation in div(id="navigation-H") -->
+<a class="nav-trigger">
+	<span></span>
+</a>
+
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<h3>Navigation</h3>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	<div class="nav-body">
+		<ul>
+			
+				<li class="menu-home">
+					<a href="/" class="menu-item-home">主页</a>
+				</li>
+			
+				<li class="menu-archive">
+					<a href="/archives" class="menu-item-archive">归档</a>
+				</li>
+			
+				<li class="menu-categories">
+					<a href="/categories" class="menu-item-categories">分类</a>
+				</li>
+			
+				<li class="menu-tags">
+					<a href="/tags" class="menu-item-tags">标签</a>
+				</li>
+			
+				<li class="menu-about">
+					<a href="/about" class="menu-item-about">关于</a>
+				</li>
+			
+				<li class="menu-gallery">
+					<a href="/gallery" class="menu-item-gallery">相册</a>
+				</li>
+			
+
+			
+		</ul>
+	</div>
+
+	<div class="nav-footer">
+		<ul>
+	
+		
+			<li>
+				<a href="http://github.com/" title="Github" target="_blank">
+					<i class="fa fa-github"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="http://github.com/" title="Weibo" target="_blank">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="mailto:http://github.com/" title="Email" target="_blank">
+					<i class="fa fa-envelope-o"></i>
+				</a>
+			</li>
+		
+
+		
+			<li>
+				<a href="http://github.com/" title="QQ" target="_blank">
+					<i class="fa fa-qq"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="http://github.com/" title="Twitter" target="_blank">
+					<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+		
+	 
+</ul>
+	</div>
+</nav>
+
+		
+		<!--main-->
+		<main>
+			<div class="layout-post">
+	
+	
+	<div class="article-title">
+		
+	<a href="/2019/03/23/玩Android微信小程序版/" itemprop="url">
+		玩Android微信小程序版
+	</a>
+
+	</div>
+
+	<div class="article-meta">
+		<span>
+			
+	发布于
+	<a href="/2019/03/23/玩Android微信小程序版/" itemprop="url">
+		<time datetime="2019-03-23T09:21:21.000Z" itemprop="datePublished">
+	  		2019-03-23
+	  </time>
+	</a> 
+
+	/
+	更新于
+	<a href="/2019/03/23/玩Android微信小程序版/" itemprop="url">
+		<time datetime="2019-03-23T09:21:21.000Z" itemprop="dateUpdated">
+	  		2019-03-23
+	  </time>
+	</a> 	
+
+		</span>
+		/
+		<span>
+			<i class="fa fa-tags"></i>
+			
+	
+		<a href="/tags/小程序/" class=" ">
+			小程序
+		</a>
+	
+		
+		</span>
+		/
+		
+
+    <span class="leancloud_visitors" id="/2019/03/23/玩Android微信小程序版/_visitors" data-url="/2019/03/23/玩Android微信小程序版/" data-title="玩Android微信小程序版">
+        热度
+        <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
+    </span>
+    
+    /
+
+
+
+    <span class="leancloud_likes" id="/2019/03/23/玩Android微信小程序版/_likes" data-url="/2019/03/23/玩Android微信小程序版/" data-title="玩Android微信小程序版" rel="unlike">
+        喜欢
+        <i class="fa fa-heart"></i>
+        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
+    </span>
+
+	</div>
+
+	<div class="article-content" id="article-content">
+		<blockquote>
+</blockquote>
+<h2 id="玩Android微信小程序版"><a href="#玩Android微信小程序版" class="headerlink" title="#玩Android微信小程序版"></a>#玩Android微信小程序版</h2><p>最近开始针对项目性全面学习了一点js，和同事一起用MUI写了个项目，就敢拿出来献丑，我也是diaodiao的。经过几十个工时业余时间<em>（最近两周有点忙，周期拖得有点长，本来计划五一之前发出来的）</em>，在<a href="https://github.com/RebeccaHanjw/weapp-wechat-zhihu" target="_blank" rel="noopener">仿知乎微信小程序demo</a>基础上，结合<a href="https://www.zybuluo.com/cmd/" target="_blank" rel="noopener">玩Android开源API</a>，完成了玩Android小程序版的初版<em>（和群里基佬们做得比感觉做的太简单了，大家就当练练手）</em>，扫码或者关注微信公众号<strong>Android精推</strong>即可体验：<br><img src="https://upload-images.jianshu.io/upload_images/4332108-1c51351445000118.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="android精推小程序码.jpg"></p>
+<p>本项目主要包含以下几大模块：</p>
+<blockquote>
+<ul>
+<li>首页</li>
+<li>项目</li>
+<li>体系</li>
+<li>我的</li>
+<li>登录</li>
+</ul>
+</blockquote>
+<p>先上预览图：</p>
+<p>###首页：<br><img src="https://upload-images.jianshu.io/upload_images/4332108-1507d7a3f1019d13.gif?imageMogr2/auto-orient/strip" alt="首页.gif"></p>
+<p>####项目：<br><img src="https://upload-images.jianshu.io/upload_images/4332108-b21c8c3fe4995eb9.gif?imageMogr2/auto-orient/strip" alt="项目.gif"></p>
+<p>###体系：<br><img src="https://upload-images.jianshu.io/upload_images/4332108-1efd0e4a1e5ebfbd.gif?imageMogr2/auto-orient/strip" alt="体系.gif"></p>
+<p>###我的：<br><img src="https://upload-images.jianshu.io/upload_images/4332108-86cac187b5a45439.gif?imageMogr2/auto-orient/strip" alt="我的.gif"></p>
+<blockquote>
+<p>为什么要写这个？学了点js就飘了，群里大佬们写的都是Android版本的，微信小程序大家似乎都有接触但是可能都觉得比较简单，也是为了便于手持iPhone的基佬们随时点赞刷玩Android。</p>
+</blockquote>
+<hr>
+<h2 id="说几点："><a href="#说几点：" class="headerlink" title="说几点："></a>说几点：</h2><h3 id="1-微信小程序开发入门注意事项"><a href="#1-微信小程序开发入门注意事项" class="headerlink" title="1. 微信小程序开发入门注意事项"></a>1. 微信小程序开发入门注意事项</h3><ul>
+<li>这里就不赘述太多，看我基友<strong>阿汤哥</strong>的一篇文章<a href="https://www.jianshu.com/p/028addf07971" target="_blank" rel="noopener">小程序基本介绍</a>就差不多了。简单归简单，不过微信小程序在开发过程中坑还是很多的，我也是边学边百度，我这个人踩坑踩惯了，建议大家初学的时候，找个优质一点的demo照葫芦画瓢，学着写很容易上手。</li>
+</ul>
+<h3 id="2-未实现的功能"><a href="#2-未实现的功能" class="headerlink" title="2. 未实现的功能"></a>2. 未实现的功能</h3><ul>
+<li>首页文章列表搜索<em>（计划V1.1实现）</em></li>
+<li>收藏列表<em>（计划V1.1实现）</em></li>
+<li>查看文章详情等需要跳转h5页面的功能<em>（计划搞到企业账号实现）</em></li>
+<li>收藏项目等<em>（目前已实现收藏文章）</em></li>
+<li>剩下的你们提，我做不出来<em>（或者没时间）</em>你们fork去</li>
+</ul>
+<h3 id="3-微信小程序代码写法的一些特点"><a href="#3-微信小程序代码写法的一些特点" class="headerlink" title="3. 微信小程序代码写法的一些特点"></a>3. 微信小程序代码写法的一些特点</h3><ul>
+<li>####工具类等输出对公共方法<br>写方法体还是一样<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">formatNumber</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ n <span class="token operator">=</span> n<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ <span class="token keyword">return</span> n<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">?</span> n <span class="token punctuation">:</span> <span class="token string">'0'</span> <span class="token operator">+</span> n
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+或者<pre class="line-numbers language-JS"><code class="language-JS">function getData(url) {
+   XXXXXX
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+都和我们原生js写法、jquery等几乎一致，然鹅要注意一点就是如果该方法需要外部调用，需要多加一个：<pre class="line-numbers language-js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+ formatTime<span class="token punctuation">:</span> formatTime
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+在文件里加上这个，或者也可以写成：<pre class="line-numbers language-js"><code class="language-js">module<span class="token punctuation">.</span>exports<span class="token punctuation">.</span>getData <span class="token operator">=</span> getData<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>####js页面数据刷新html（wxml）<br>微信小程序绑定js数据不像angular那样，在每个页面的js文件中，都有个类似oncreat的方法，即Page() 函数，它是用来注册一个页面。接受一个 object 参数，其指定页面的初始数据、生命周期函数、事件处理函数等这里每个页面的WXML 中的动态数据均来自对应 Page 的 data。给页面初始赋值可以在data里面直接放置：</p>
+<pre class="line-numbers language-js"><code class="language-js">data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    motto<span class="token punctuation">:</span> <span class="token string">'Hello World'</span><span class="token punctuation">,</span>
+    userInfo<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    wanUserName<span class="token punctuation">:</span> <span class="token string">'登录玩Android账户'</span><span class="token punctuation">,</span>
+ <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>而我们经过数据处理以后，需要实时更新页面则可以直接调用：</p>
+<pre><code>       //更新数据
+       that.setData({
+          userInfo: userInfo
+       })
+</code></pre><p>对，就是键值对的方式，和data一样。这里需要注意的是<strong>that</strong>这个，我们一般会在方法体内部先var一个参数that去获取全局实例<strong>this</strong>，这样避免方法自己的实例取代了页面的全局实例。this代表着当前对象，会随着程序的执行过程中的上下文改变，例如在wx.request({});方法的回调函数中，对象已经发生改变，所以已经不是wx.request({});方法对象了，data属性也不存在了。</p>
+</li>
+<li><p>####页面销毁与返回<br>那么在微信小程序里我们怎么管理页面呢。微信小程序固然没有AMS这些东西，那么我们可以判断page来管理：</p>
+<pre><code>       // 返回上个页面
+       setTimeout(function () {
+          wx.navigateBack({
+             delta: 1
+          })
+       }, 1500);
+</code></pre><p>这里我设置了一个延迟，核心的代码是wx.navigateBack(),这里面的参数delta指的是退回页面的层数，比如我这里是返回上一页，那么值就是1，以此类推。。。但是我们一般返回上个页面的时候也会带一定的参数，这里就有三种<em>（可能更多）</em>介绍给大家：<br>1、利用本地存储<em>（类似Android的sp）</em>方式存储起来，这里去看看官方文档很简单，都是wx.XXX的。<br>2、利用生命周期传递，例如：</p>
+<pre><code>var pages = getCurrentPages();
+var currPage = pages[pages.length - 1];   //当前页面
+var prevPage = pages[pages.length - 2];  //上一个页面
+//直接调用上一个页面的setData()方法，把数据存到上一个页面中去
+prevPage.setData({
+mydata: {a:1, b:2}
+})
+</code></pre><p>这里是在简书的<a href="https://www.jianshu.com/p/aa8254b23847" target="_blank" rel="noopener">微信小程序从子页面退回父页面时的数据传递</a>学习到的。这种方式在逻辑上要清晰得多，也不存在对数据的销毁有额外的管理工作，看起来十分优雅，从一定的角度说类似于Android的ActivityForResult方式。当然有利也是有弊的，比如使用这个页面的有多个入口，这样做很可能会导致获取到的页面实例不正确。当然如果对于逻辑层次简单的、耦合少的页面还是比较方便的。</p>
+</li>
+</ul>
+<p>3、使用fire传递，这个方式是类似于我们EventBus的方式，后面有详解。</p>
+<ul>
+<li>####利用第三方工具fire实现类似EventBus全局事件通知</li>
+</ul>
+<p>之前说到，fire是一个非常轻量级的第三方的组件库，在微信小程序限制项目大小2MB的情况下，在js调用中可以实现类似EventBus的全局事件订阅管理，非常简单好用。<br>1、首先，导fire文件，这个去网上下载一个<em>（不到1KB）</em>就可以，直接把onfire.js文件拷过来。<br>2、写订阅事件和接受者的时候：</p>
+<blockquote>
+<ul>
+<li>A 页面先订阅一个事件，并定义处理方法；</li>
+<li>从 B 页面返回时，发送消息；</li>
+<li>A 页面卸载时，解除订阅。</li>
+</ul>
+</blockquote>
+<p>是不是一毛一样的？不仅仅在微信小程序中，包括vue、React等都可以使用，具体使用<em>（无非是一行代码发送消息，接收消息的时候写一个方法）</em>可以去自行百度。</p>
+<ul>
+<li>####列表单个Item点击控件冲突<br>焦点冲突什么的在Android里面问题多多，在这里就要简单太多了。之前我曾尝试使用Android的方式去做，发现总是碰壁。无奈又要求助一波百度<em>（文档看的太少）</em>。在点击事件的时候，我们一般是给被点击View添加一个bindtap方法，后面写上方法名即可：<pre><code>bindtap=&quot;bindItemTap&quot;
+</code></pre>而如果这个View里面包含了其他的子View需要添加点击事件的时候，我们需要使用另一种写法了：<pre><code>catchtap=&quot;clickCollect&quot;
+</code></pre>这里的点击事件也很有趣，包括手指的手势都有涉及，包括手指点下去的时候、抬起来的时候、移动的时候等等，和Android的ACTION_DOWN及 ACTION_UP等异曲同工。</li>
+<li>####URL的限制， 不论什么请求必须Https<br>微信小程序对于网络请求有一定的限制，比如我们的玩Android是仅支持http的，但是微信是要求必须使用https请求才被许可，这也简单。我采用的方法是利用<a href="https://wxapi.hotapp.cn/proxy/" target="_blank" rel="noopener">第三方搭建的网站</a>进行url桥接。把网络管理类里面的baseUrl前面加上<em><a href="https://wxapi.hotapp.cn/proxy/" target="_blank" rel="noopener">https://wxapi.hotapp.cn/proxy/</a></em>，然后拼上你在网站申请的key<em>（可以写死）</em>，然后拼上你http协议的url即可。</li>
+</ul>
+<p>提到微信的url限制，不得不说微信目前限制个人开发者和海外开发者使用webview打开第三方h5页面。所以，咱们在预览的时候只能用编译器去预览，想看具体的文章目前还是有限制的，我就不求赞助申请企业认证了。当然也欢迎有企业账户的基佬把代码fork过去给大家提供个福利<em>（别犯法哦）</em>。</p>
+<ul>
+<li>####其他的就不多赘述了</li>
+</ul>
+<p>再一次感谢您花费时间看我啰嗦了这么久，觉得还不错可以 <strong><a href="https://github.com/samhaus/wanAndroid" target="_blank" rel="noopener">star star star</a></strong> 一波。微信小程序我并不打算深耕太多，后面会把重心转移到其他技术方面。如果您对本项目有什么想法欢迎<a href="https://github.com/samhaus/wanAndroid/issues" target="_blank" rel="noopener">去提issue</a>，有兴趣可以自己参与进来迭代维护。祝您生活愉快！</p>
+<p>作者 <a href="https://www.jianshu.com/u/5b8df438b435" target="_blank" rel="noopener">@samhaus</a><br>2018 年 05月 01日 </p>
+	
+	</div>
+	
+	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+
+	<!-- relate post, comment...-->
+	<div class="investment-container">
+		<div class="investment-header">
+			<div class="investment-title-1">
+				<div class="on">相关文章</div>
+				<div>评论</div>
+			</div>
+			<div class="investment-title-2">	            
+				
+	<span>
+		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
+		
+			<a href="/2019/03/23/Android开发百度地图指南针消失问题/" title="Android开发百度地图指南针消失问题" rel="prev">
+				&laquo;上一篇
+			</a>
+		
+		
+			<a href="/2019/03/23/移动端html展示word文档转换方法/" title="移动端html展示word文档转换方法" rel="next">
+				下一篇&raquo;
+			</a>
+			
+	</span>
+      		
+			</div>	
+		</div>
+		
+		<div class="investment-content">
+			<div class="investment-content-list">
+				
+
+<div class="relate-post">
+	<ul>
+		
+				<li>
+					<div>
+						<a href="/2019/03/23/Android开发百度地图指南针消失问题/" title="Android开发百度地图指南针消失问题">
+							Android开发百度地图指南针消失问题
+						</a>
+						<p>
+							
+   发现最近接手的项目跟百度地图干上了，从2014年的V3.xx版本到现在的最新版，踩了不知道没踩过的多少坑。今天在维护一个2014年的老项目的时候，反馈有一条“指南针不显示，旋转后无法复位”。好吧，由于是老项目，第一个我们考虑的...
+						</p>
+					</div>
+
+					<a href="/2019/03/23/Android开发百度地图指南针消失问题/" title="Android开发百度地图指南针消失问题">				
+						<img src="/img/cart_cover.jpg" class="relateImg" alt="Android开发百度地图指南针消失问题">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2019/03/23/移动端html展示word文档转换方法/" title="移动端html展示word文档转换方法">
+							移动端html展示word文档转换方法
+						</a>
+						<p>
+							
+需求：
+把几份word文档（需求说明、法规文件等等）放到手机端，需要用h5的形式展示出来。方法一、自己写成html标签的段落：话不多说，show my code：
+var content=&quot;  该模型描述水质组分的迁移变化...
+						</p>
+					</div>
+
+					<a href="/2019/03/23/移动端html展示word文档转换方法/" title="移动端html展示word文档转换方法">				
+						<img src="/img/cart_cover.jpg" class="relateImg" alt="移动端html展示word文档转换方法">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2019/02/22/RAP简介教程&常用规则/" title="RAP简介教程&常用规则">
+							RAP简介教程&常用规则
+						</a>
+						<p>
+							
+上篇文章浅谈了mock数据的工具对比，在实际使用过程中，需要mock的数据包含各种语法规则、数据规律等等，最完善的规则建议还是参考MOCK.js教程，但是，这里就需要了解下RAP在使用时常用的一些写法了。
+首先我们先看下RAP的整个...
+						</p>
+					</div>
+
+					<a href="/2019/02/22/RAP简介教程&常用规则/" title="RAP简介教程&常用规则">				
+						<img src="/img/cart_cover.jpg" class="relateImg" alt="RAP简介教程&常用规则">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2019/02/22/关于Android studio中遇到Library has broken以及mac遇到clean消失问题/" title="关于Android studio中遇到Library has broken以及mac遇到clean消失问题">
+							关于Android studio中遇到Library has broken以及mac遇到clean消失问题
+						</a>
+						<p>
+							
+    今天在神坑百度地图版本问题上又踩到了一个坑。由于原先公司某个老项目中百度地图停留在两三年前某个老版版本，今年又翻出来丢给我迭代开发，于是找个了新版本百度地图jar包和so库放进去。当然，jar包和so库是需要配套使用的，由于...
+						</p>
+					</div>
+
+					<a href="/2019/02/22/关于Android studio中遇到Library has broken以及mac遇到clean消失问题/" title="关于Android studio中遇到Library has broken以及mac遇到clean消失问题">				
+						<img src="/img/cart_cover.jpg" class="relateImg" alt="关于Android studio中遇到Library has broken以及mac遇到clean消失问题">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2019/02/22/浅谈前端MOCK数据工具比较/" title="浅谈前端MOCK数据工具比较">
+							浅谈前端MOCK数据工具比较
+						</a>
+						<p>
+							
+前言： 目前的前后端开发中比较常采用前后端分离的做法，而前后端分离在沟通和联调方面又时长会有障碍，比如前后端进度不一、前后端联调时间较短、前后端沟通麻烦（跨地区、跨时区等等）。目前为了解决这个问题，最常用的就是通过Mock数据的方式...
+						</p>
+					</div>
+
+					<a href="/2019/02/22/浅谈前端MOCK数据工具比较/" title="浅谈前端MOCK数据工具比较">				
+						<img src="/img/cart_cover.jpg" class="relateImg" alt="浅谈前端MOCK数据工具比较">
+					</a>
+				</li>											
+		
+		
+	</ul>
+</div>	
+			</div>
+			<div class="investment-content-list">
+				<div class="layout-comment">
+
+	
+
+		
+
+			<!-- I don't know 【表情】-->
+			
+		
+		
+	
+
+</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+
+	<script>
+		var appid = 'dX--',
+            appkey = 'dx--';	  
+        AnnieLeancloud(appid, appkey);         
+	</script>
+    
+
+
+ 
+
+<!-- show math formula -->
+
+
+
+
+<!-- TODO: There seems to be a bug when you close the post gallery! -->
+<link rel="stylesheet" href="/plugin/lightgallery/css/lightgallery.css">
+<script src="/plugin/lightgallery/js/jquery-1.11.0.min.js"></script>
+<script src="/plugin/lightgallery/js/lightgallery-all.min.js"></script>
+
+<script type="text/javascript">
+	var postTitle = $('.article-title a').text() ? $('.article-title a').text() : "No post title!";
+	$('.article-content img').each(function() {
+		var imgPath = $(this).attr('src'),
+			imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		$(this).wrap('<div class="img-responsive" data-src="' + imgPath + '" data-responsive="' + imgPath + '" data-sub-html="<p>图片 ' + imgTitle + '</p><h4>文章' + postTitle + '</h4>"></div>');
+	});
+
+	$('.article-content').lightGallery({
+		mode: 'lg-slide',
+		selector: '.img-responsive',
+		share: false,
+		zoom: false,
+		download: false
+	});
+	//TODO：支持video
+</script>
+
+<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+		
+
+		<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
+	
+		</main>
+		
+		<!--footer-->
+		<footer>
+	<div class="social">
+		<ul>
+	
+		
+			<li>
+				<a href="http://github.com/" title="Github" target="_blank">
+					<i class="fa fa-github"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="http://github.com/" title="Weibo" target="_blank">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="mailto:http://github.com/" title="Email" target="_blank">
+					<i class="fa fa-envelope-o"></i>
+				</a>
+			</li>
+		
+
+		
+			<li>
+				<a href="http://github.com/" title="QQ" target="_blank">
+					<i class="fa fa-qq"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="http://github.com/" title="Twitter" target="_blank">
+					<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+		
+	 
+</ul>
+	</div>
+		
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2019, content by samhaus. All Rights Reserved.
+			
+			
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+		
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+
+		<span id="busuanzi_container_page_pv">
+	  		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span>
+
+	
+
+
+
+
+		</p>
+		<p>
+			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay. 					
+		</p>
+	</div>		
+</footer>
+		
+    <!-- set '1' to show motto in all pages! -->
+
+	<script src="/js/motto.js"></script>
+	<script type="text/javascript">
+		$(".motto").html( getMingYanContent() );
+	</script>	
+
+
+
+
+
+
+    <script src="/js/love.js"></script>
+
+
+<!--back to top-->
+
+    
+	<div id="totop">
+  		<a href="javascript:;" name="TOTOP" class="fa fa-arrow-up"></a>
+	</div>
+	<div id="tobuttom">
+		<a href="javascript:;" name="TOBUTTOM" class="fa fa-arrow-down"></a>
+	</div>
+ 
+
+
+ 
+
+<script src="/js/vibrant.js"></script>
+<script src="/js/chinese.js"></script>
+<script src="/js/main.js"></script>
+	</body>
+	</html>

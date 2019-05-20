@@ -84,7 +84,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于Android studio中遇到Library has broken以及mac遇到clean消失问题">
 <meta property="og:url" content="http://yoursite.com/2019/02/22/关于Android studio中遇到Library has broken以及mac遇到clean消失问题/index.html">
-<meta property="og:site_name" content="墨白mobile的Blog">
+<meta property="og:site_name" content="墨白mobile">
 <meta property="og:description" content="今天在神坑百度地图版本问题上又踩到了一个坑。由于原先公司某个老项目中百度地图停留在两三年前某个老版版本，今年又翻出来丢给我迭代开发，于是找个了新版本百度地图jar包和so库放进去。当然，jar包和so库是需要配套使用的，由于新老版本兼容性并不是很好，某些老方法在新版本并不能向下兼容。。。神坑百度^_^|||       当然这并不是今天的重点。重点是我换了jar包和so库以后问题来了。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-03-23T09:03:47.011Z">
@@ -126,7 +126,7 @@
 
 
 
-  <title>关于Android studio中遇到Library has broken以及mac遇到clean消失问题 | 墨白mobile的Blog</title>
+  <title>关于Android studio中遇到Library has broken以及mac遇到clean消失问题 | 墨白mobile</title>
   
 
 
@@ -157,7 +157,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">墨白mobile的Blog</span>
+        <span class="site-title">墨白mobile</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -299,11 +299,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="samhaus">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/samhaus_logo.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="墨白mobile的Blog">
+      <meta itemprop="name" content="墨白mobile">
     </span>
 
     
@@ -350,6 +350,17 @@
           
 
           
+          
+             <span id="/2019/02/22/关于Android studio中遇到Library has broken以及mac遇到clean消失问题/" class="leancloud_visitors" data-flag-title="关于Android studio中遇到Library has broken以及mac遇到clean消失问题">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -436,8 +447,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/23/移动端html展示word文档转换方法/" rel="prev" title="移动端html展示word文档转换方法">
-                移动端html展示word文档转换方法 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/22/RAP简介教程&常用规则/" rel="prev" title="RAP简介教程&常用规则">
+                RAP简介教程&常用规则 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -502,6 +513,8 @@
       <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/samhaus_logo.png" alt="samhaus">
             
               <p class="site-author-name" itemprop="name">samhaus</p>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -751,6 +764,113 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("Y3JgbJxD1kJe0nctj1OfsbLR-gzGzoHsz", "O8oCQYuKFX0XoXVGiSGaXGE2");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
